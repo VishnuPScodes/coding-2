@@ -11,6 +11,9 @@
     width: 200px;
     margin: 50px;
 }
+.container>div:hover{
+    cursor: pointer;
+}
 h1{
     color: blue;
 }
