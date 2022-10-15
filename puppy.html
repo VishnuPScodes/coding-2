@@ -8,7 +8,9 @@
 </head>
 <body>
     <div>
-        this is puppy
+       <div class="single">
+        <img src="" alt="">
+       </div>
     </div>
 </body>
 </html>
@@ -32,7 +34,7 @@ let imagesare=[];
 getData(url)
   .then((data)=>{
     console.log('data reccievded',data)
-    imagesare=[...data[0]]
+    imagesare=[...data]
     console.log('modified images',imagesare)
   })
   .catch(error => console.log(error.message))
