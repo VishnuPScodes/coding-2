@@ -12,7 +12,7 @@
     <div class="container">
       
         <div>
-            <div class="name">Hound</div>
+            <div class="name" onclick="takeMeToPuppy()">Hound</div>
         </div>
         <div>
             <div class="name">beagle</div>
@@ -46,6 +46,7 @@
 </html>
 <script>
      function takeMeToPuppy(){
-        
+        localStorage.setItem('breed', 'hound');
+        window.location.href='./puppy.html'
      }
 </script>
