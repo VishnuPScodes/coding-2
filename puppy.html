@@ -9,6 +9,9 @@
 </head>
 <body>
     <div>
+        <div class="heading">
+            <h1 id="head"></h1>
+        </div>
         <div id="main"> 
         <!-- <img src='' alt=`${data?.message[1]}`><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""> -->
     </div>
@@ -17,6 +20,10 @@
 </html>
 <script>
     let breed=localStorage.getItem('breed');
+    let head=document.getElementsById('head');
+    head.innerText=`Welcome to the world of ${breed}`
+
+  
     console.log(breed)
     let data=fetch(`https://dog.ceo/api/breed/${breed}/images`);
     console.log('data',data);

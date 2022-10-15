@@ -13,3 +13,8 @@
     height: 300px;
     width: 200px;
 }
+.heading{
+    color: red;
+    margin: auto;
+    text-align: center;
+}
