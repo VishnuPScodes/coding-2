@@ -15,4 +15,7 @@
 <script>
     let breed=localStorage.getItem('breed');
     console.log(breed)
+    let data=fetch(`https://dog.ceo/api/breed/${breed}/images`);
+    console.log('data',data);
+    //huy
 </script>
