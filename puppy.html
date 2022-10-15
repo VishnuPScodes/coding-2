@@ -28,8 +28,12 @@
   })
 
 
-
+let imagesare=[];
 getData(url)
-  .then(data => console.log('data reccievded',data))
+  .then((data)=>{
+    console.log('data reccievded',data)
+    imagesare=[...data[0]]
+    console.log('modified images',imagesare)
+  })
   .catch(error => console.log(error.message))
 </script>
