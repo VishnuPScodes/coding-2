@@ -8,9 +8,11 @@
 </head>
 <body>
     <div>
+        <div class="main"> 
        <div id="image">
         
        </div>
+    </div>
     </div>
 </body>
 </html>
@@ -39,8 +41,9 @@ getData(url)
   })
   .catch(error => console.log(error.message))
 
-  data?.message?.map((e)=>{
+ 
+  for(let i=0;i<50;i++){
     let single=document.getElementById('image')
-    single.innerHTML += '<img src=`${e}` />';
-  })
+    single.innerHTML += '<img src=`${data?.message[i]}` />';
+  }
 </script>
