@@ -8,12 +8,44 @@
 </head>
 <body>
     <input id="input" type="text" onchange="handle()" placeholder="Search your dogs here">
+    <br>
+    <div id="main"> 
+        <!-- <img src='' alt=`${data?.message[1]}`><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""> -->
+    </div>
 </body>
 </html>
 <script>
-   function handle(e){
+   function handle(){
+    let single1=document.getElementById('main')
    let inputv=document.getElementById('input');
    let valueis=inputv.value;
-   console.log(valueis)
+   console.log(valueis);
+   let data=fetch(`https://dog.ceo/api/breed/${valueis}/images`);
+    console.log('data',data);
+
+    //huy
+    const url = `https://dog.ceo/api/breed/${breed}/images`
+    const getData = (url) =>
+  new Promise((resolve, reject) => {
+    fetch(url)
+      .then(response => response.json())
+      .then(json => resolve(json))
+      .catch(error => reject(error))
+  })
+  getData(url)
+  .then((data)=>{
+    console.log('data reccievded',data?.message[1])
+    let single=document.getElementById('main')
+  for(let i=0;i<data.message.length;i++){
+    let single1=document.createElement('img');
+    single1.src=`${data?.message[i]}`
+    single.append(single1)
+  }
+ 
+  
+  })
+
+  .catch(error => console.log(error.message))
+
    }
 </script>
