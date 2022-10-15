@@ -40,14 +40,12 @@ getData(url)
   .catch(error => console.log(error.message))
 
  let x="";
+ let single=document.getElementById('main')
   for(let i=0;i<50;i++){
-    let single=document.getElementById('main')
+  
     x+='<div id="main">  <img src="${data?.message[i]}" alt="">  </div>'
-   single.innerHTML=x|'loading'
+  
   }
-  function name(){
-    let avhgh='djdkjk'
-    let bot='w'
-    let hey='hey'
-  }
+  single.innerHTML=x
+ 
 </script>
