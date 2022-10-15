@@ -8,8 +8,8 @@
 </head>
 <body>
     <div>
-       <div class="single">
-        <img src="" alt="">
+       <div id="image">
+        
        </div>
     </div>
 </body>
@@ -33,9 +33,14 @@
 let imagesare=[];
 getData(url)
   .then((data)=>{
-    console.log('data reccievded',data)
-    imagesare=[...data]
-    console.log('modified images',imagesare)
+    console.log('data reccievded',data?.message[1])
+   
+  
   })
   .catch(error => console.log(error.message))
+
+  data?.message?.map((e)=>{
+    let single=document.getElementById('image')
+    single.innerHTML += '<img src=`${e}` />';
+  })
 </script>
