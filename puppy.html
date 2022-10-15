@@ -35,7 +35,7 @@ getData(url)
   .then((data)=>{
     console.log('data reccievded',data?.message[1])
     let single=document.getElementById('main')
-  for(let i=0;i<50;i++){
+  for(let i=0;i<data.message.length;i++){
     let single1=document.createElement('img');
     single1.src=`${data?.message[i]}`
     single.append(single1)
