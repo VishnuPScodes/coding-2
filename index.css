@@ -14,3 +14,7 @@
 h1{
     color: blue;
 }
+.head{
+    margin: auto;
+    text-align: center;
+}
