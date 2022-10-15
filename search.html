@@ -7,11 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" onchange="handle(e)" placeholder="Search your dogs here">
+    <input id="input" type="text" onchange="handle()" placeholder="Search your dogs here">
 </body>
 </html>
 <script>
    function handle(e){
-    console.log(e.target.value)
+   let inputv=document.getElementById('input');
+   let valueis=inputv.value;
+   console.log(valueis)
    }
 </script>
