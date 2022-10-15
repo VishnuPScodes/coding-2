@@ -11,43 +11,43 @@
     <div class="head">  <h1>Your Favourute Dogs!🐶</h1></div>
     <div class="container">
       
-        <div onclick="takeMeToPuppy()">
+        <div onclick="takeMeToPuppy('hound')">
             <div class="nam">Hound</div>
         </div>
-        <div onclick="takeMeToPuppy()">
+        <div onclick="takeMeToPuppy('beagle')">
             <div class="name">beagle</div>
         </div>
-        <div onclick="takeMeToPuppy()">
+        <div onclick="takeMeToPuppy('poodle')">
             <div class="name">poodle</div>
         </div>
-        <div onclick="takeMeToPuppy()">
+        <div onclick="takeMeToPuppy('bulldog')">
             <div class="name">bulldog</div>
         </div>
-        <div>
+        <div onclick="takeMeToPuppy('pitbull')">
             <div class="name">Pitbull</div>
         </div>
-        <div onclick="takeMeToPuppy()">
+        <div onclick="takeMeToPuppy('samayed')">
             <div class="nam">samoyed</div>
         </div>
-        <div>
+        <div onclick="takeMeToPuppy('boxer')">
             <div class="name">Boxer</div>
         </div>
-        <div onclick="takeMeToPuppy()">
+        <div onclick="takeMeToPuppy('borzoi')">
             <div class="name">Borzoi</div>
         </div>
-        <div onclick="takeMeToPuppy()">
+        <div onclick="takeMeToPuppy('collie')">
             <div class="name">Collie</div>
         </div>
-        <div onclick="takeMeToPuppy()">
+        <div onclick="takeMeToPuppy('dalmatian')">
             <div class="name">Dalmatian</div>
         </div>
     </div>
 </body>
 </html>
 <script>
-     function takeMeToPuppy(){
+     function takeMeToPuppy(b){
         console.log('yes clicked')
-        localStorage.setItem('breed', 'hound');
+        localStorage.setItem('breed', b);
         window.location.href='./puppy.html'
      }
 </script>
